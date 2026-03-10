@@ -1,8 +1,12 @@
 ﻿#include "gogogo++.h"
 using namespace std;
-
+int add(int a,GameCharacter people)
+{
+    people.health += a;
+}
 // ============ 1. 最简单的类 ============
 class GameCharacter {
+    friend int add(int a, GameCharacter people);
     // 2. 访问控制：private和public
 private:
     // 3. 成员变量（属性）
@@ -37,7 +41,7 @@ public:
         experience = 0;
         cout << name << "(Lv." << level << ") 诞生了！" << endl;
     }
-
+    GameCharacter() = default;
     // 析构函数
     ~GameCharacter() {
         cout << name << " 离开了游戏..." << endl;
