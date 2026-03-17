@@ -1,14 +1,57 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
-            "name": "运行当前文件",
+            "name": "(Windows) 启动",
+            "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\我的期末作业\\我的期末作业\\展示文件.cpp"
+            "program": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Debug C (GDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/ProgrameConifgure/MinGw/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为GDB启用美化打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-c"
+        },
+        {
+            "name": "Debug C++ (GDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}/../VS_Code_Build/Debug/${fileDirnameBasename}/exe",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/ProgrameConifgure/MinGw/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为GDB启用美化打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-cpp"
         }
     ]
 }

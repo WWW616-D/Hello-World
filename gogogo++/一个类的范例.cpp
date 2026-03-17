@@ -11,7 +11,7 @@ class GameCharacter {
 private:
     // 3. 成员变量（属性）
     string name;
-    int level;
+    mutable int level;
     int health;
     int attack;
     int defense;
