@@ -4,29 +4,19 @@ using std::cout;
 using std::cerr;
 using std::endl;
 using std::cin;
-double divide(int x ,int y)
+class abc
 {
-	if (y==0)
-	{
-		throw runtime_error("balabala");
-	}
-	return x / y;
+private:
+	int num = 0;
+public:
+	abc addabc(abc& nihao);
+};
+abc abc::addabc(abc& nihao)
+{
+	cout << "hello" << endl;
+	return nihao;
 }
-
 int main()
 {
-	std::cerr << "hello" << std::endl;
-	int x;
-	int y;
-	cin >> x >> y;
-	try
-	{
-		double value = divide(x, y);
-		cout << "两个数的商为:" << value;
-	}
-		catch(const runtime_error& e)
-		{
-			cerr << e.what() << endl;
-		}
-	
+	return 0;
 }

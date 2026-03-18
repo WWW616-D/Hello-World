@@ -80,7 +80,7 @@ public:
 };
 
 // --- 测试主函数 ---
-int main() {
+int main_trie() {
     // 不需要手动 delete，Trie 对象销毁时会自动调用析构函数清理内存
     Trie trie;
 

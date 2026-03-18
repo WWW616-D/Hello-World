@@ -365,36 +365,10 @@ private:
 };
 
 // 测试代码
-int main() {
+int main_red() {
     RedBlackTree<int> rbt;
 
-    std::cout << "=== 红黑树插入测试 ===\n";
-    int insertValues[] = { 10, 20, 30, 15, 25, 5, 1 };
-
-    for (int val : insertValues) {
-        std::cout << "\n插入 " << val << ":\n";
-        rbt.insert(val);
-        rbt.print();
-        std::cout << "中序遍历: ";
-        rbt.inorder();
-        std::cout << "是否有效: " << (rbt.isValid() ? "是" : "否") << "\n";
-    }
-
-    std::cout << "\n=== 红黑树删除测试 ===\n";
-    int deleteValues[] = { 15, 20, 5 };
-
-    for (int val : deleteValues) {
-        std::cout << "\n删除 " << val << ":\n";
-        rbt.remove(val);
-        rbt.print();
-        std::cout << "中序遍历: ";
-        rbt.inorder();
-        std::cout << "是否有效: " << (rbt.isValid() ? "是" : "否") << "\n";
-    }
-
-    std::cout << "\n=== 查找测试 ===\n";
-    std::cout << "查找 10: " << (rbt.search(10) ? "找到" : "未找到") << "\n";
-    std::cout << "查找 15: " << (rbt.search(15) ? "找到" : "未找到") << "\n";
+   
 
     return 0;
 }
