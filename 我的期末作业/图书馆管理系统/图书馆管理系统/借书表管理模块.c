@@ -2,7 +2,7 @@
 record* GetRecord()
 {
 	FILE* file = fopen("D:\\代码\\我的期末作业\\图书馆管理系统\\借书记录.txt", "r");
-	if (file==NULL)
+	if (file!=NULL)
 	{
 		printf("文件打开失败\n");
 	}
